@@ -1,0 +1,19 @@
+<h2>My Gods</h2>
+
+<div>
+  <label>Nombre del dios:
+    <input #godName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(godName.value); godName.value=''">
+    Agregar
+  </button>
+</div>
+
+<ul class="gods">
+  <li *ngFor="let god of gods">
+    <a routerLink="/detail/{{god.id}}">
+      <span class="badge">{{god.id}}</span> {{god.name}}
+    </a>
+  </li>
+</ul>

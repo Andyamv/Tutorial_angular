@@ -1,0 +1,11 @@
+<h3>Top Gods</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let god of gods" class="col-1-4"
+      routerLink="/detail/{{god.id}}">
+    <div class="module god">
+      <h4>{{god.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-god-search></app-god-search>

@@ -1,0 +1,12 @@
+<div *ngIf="god">
+
+  <h2>{{god.name | uppercase}} Detalles</h2>
+  <div><span>id: </span>{{god.id}}</div>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="god.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">Regresar</button>
+  <button (click)="save()">Guardar</button>  
+</div>
